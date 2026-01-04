@@ -1,0 +1,36 @@
+name = "mi-api-imagenes"
+main = "worker.js"
+compatibility_date = "2024-12-10"
+
+# ===== 環境變量配置 =====
+[vars]
+# API 訪問密鑰（必需）
+API_MASTER_KEY = "dragones12345"
+
+# Cloudflare API Token（必需）
+# 如何獲取：
+# 1. 登錄 Cloudflare Dashboard
+# 2. 點擊右上角頭像 -> My Profile -> API Tokens
+# 3. 點擊 "Create Token" -> 使用 "Edit Cloudflare Workers" 模板
+# 4. 或者創建自定義 Token，權限需要：Account.Workers AI:Read
+CF_API_TOKEN = "P6y3-LZ8RcBKsIl0jaTYEuOe-W2C7qupyhvzqsXU"
+
+# Cloudflare Account ID（必需）
+# 如何獲取：
+# 1. 登錄 Cloudflare Dashboard
+# 2. 選擇任意網站
+# 3. 在右側欄找到 "Account ID"
+ACCOUNT = "5dd1eef4eb7debb0279d46faeaaf1562"
+
+# 注：也可以使用 CF_ACCOUNT_ID 代替 ACCOUNT
+# CF_ACCOUNT_ID = "your-cloudflare-account-id"
+
+# ===== 部署說明 =====
+# 1. 修改以上三個環境變量
+# 2. 運行: wrangler deploy
+# 3. 訪問您的 Workers 域名
+
+# ===== API 調用格式 =====
+# API Endpoint: https://api.cloudflare.com/client/v4/accounts/{ACCOUNT}/ai/run/@cf/black-forest-labs/flux-2-dev
+# Model: @cf/black-forest-labs/flux-2-dev
+# Variable: ACCOUNT or CF_ACCOUNT_ID
